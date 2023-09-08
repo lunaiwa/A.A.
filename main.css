@@ -1,23 +1,26 @@
 body {
-    background-color: #2f4454;
+    background-color: #e5e5e5;
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 300px;
+    font-family: ravioli;
 }
 /*Title of the page*/
 h1{
-    color:#ffff;
+    color:#FF5733;
     font-family: 'Palette Mosaic', cursive;
     font-size: 70px;
     text-align: center;
     padding: 20px;
+    font-family: ravioli;
 }
 /*Subtitles on the Page*/
 h2{
-    color:#da7b93;
+    color:#4CAF50;
     font-family: 'Palette Mosaic', cursive;
     font-size: 30px;
     text-align: center;
+    font-family: ravioli;
 }
 /*Line and Page Seperation*/
 h3{
@@ -27,10 +30,11 @@ h3{
     text-align: center;
     padding: 10px;
     margin: 20px;
+    font-family: ravioli;
 }
 /*Descriptions under the Subtitles*/
 p {
-    color: #599192;
+    color: #5dd761;
     font-family: 'Slackside One', cursive;
     font-size: 25px;
     padding: 30px;
@@ -38,53 +42,16 @@ p {
     letter-spacing: -1px;
     max-width: 900px; 
     margin: 0 auto;
-}
-/*Coding Blacks*/
-pre {
-    margin: 30px;
-    font-family: 'Slackside One', cursive;
+    font-family: ravioli;
 }
 
-pre code {
-    background-color: #ffdfdf;
-    border: transparent;
-    display: block;
-    padding: 20px 60px;
-    margin: 30px;
-    border-radius: 10px;
-    padding-left: 40px;
+/*Fonts using DaFont*/
+@font-face {
+    font-family: ravioli;
+    src: url("../ravioli.ttf");
 }
 
-.column {
-    border-radius: 25px;
-    padding: 50px;
-    padding-right: 10px;
-    background-image: linear-gradient(180deg, #FDE0CA, white);
-}
-
-/*Sorting Chart Containers*/
-.chart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#chart-container {
-    width: 600px;
-    height: 400px;
-}
-
-button {
-    margin: 10px;
-    display: inline-block;
-}
-.button-container {
-    display: flex;
-}
-
-.button-container button {
-    margin: 0 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
+@font-face {
+    font-family: nexa;
+    src: url("../nexa.ttf");
 }
