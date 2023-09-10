@@ -45,11 +45,6 @@
 
 
 </body>
-</html>
  
-            </footer>
-        </main>
-    </body>
-</html>
-
+ 
 
