@@ -8,7 +8,6 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-
         /* CSS for each comment */
         .comment {
             border: 2px solid #ccc;
@@ -18,26 +17,23 @@
             width: calc(25% - 10px); /* 25% width for four comments per row, minus gap */
             box-sizing: border-box; /* Include padding and border in the width */
         }
-
         /* Hover effect for comments */
         .comment:hover {
-            border-color: #007bff; /* Change the border color on hover */
+            border-color: #FF5733; /* Change the border color on hover */
         }
-
         /* Style for images in comments */
         .comment img {
             max-width: 100%;
         }
-
         /* CSS for the circular "Add Comment" button */
         .add-comment-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #007bff;
+            background-color: #FF5733;
             color: #fff;
-            width: 50px;
-            height: 50px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -45,7 +41,6 @@
             font-size: 20px;
             cursor: pointer;
         }
-
         /* CSS for the popup form */
         .popup-form {
             display: none;
@@ -54,12 +49,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 300px;
-            background-color: #fff;
+            background-color: #f4f4f4;
             border: 1px solid #ccc;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             padding: 20px;
+            border-radius: 10px;
         }
-
         /* CSS for the close (X) button in the popup */
         .close-button {
             position: absolute;
@@ -69,23 +64,65 @@
             font-size: 20px;
             color: #888;
         }
+        /* CSS for the name in the comment */
+        .comment-name {
+            font-size: 16px;
+            color: #4CAF50; /* Change the color for the name */
+            margin-bottom: 5px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 5px 0;
+            border: none;
+            border-bottom: 5px solid #FF5733; /* Underline effect */
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease-in-out;
+        }
+        /* Change the underline color on input focus */
+        .form-input:focus {
+            border-bottom-color: #4CAF50;
+        }
+        /* CSS for the "Add Comment" button */
+        .add-comment-button-form {
+            background-color: #FF5733;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .add-comment-button-form:hover {
+            background-color: #4CAF50;
+        }
     </style>
 </head>
 <body>
-    <h1>Comments Section with Pictures</h1>
-    
+    <h1>Culinary Creations</h1>
+    <h2>post and share to everyone here!</h2>
+    <br>
     <div id="comments">
         <!-- Existing comments will be displayed here -->
     </div>
-
     <div class="add-comment-button" onclick="toggleForm()">+</div>
-
     <div id="commentForm" class="popup-form">
         <div class="close-button" onclick="toggleForm()">X</div>
-        <input type="text" id="nameInput" placeholder="Your Name">
-        <textarea id="commentInput" placeholder="Type your comment here"></textarea>
+        <br>
+        <input type="text" id="nameInput" class="form-input" placeholder="Your Name">
+        <br>
+        <br>
+        <br>
+        <textarea id="commentInput" class="form-input" placeholder="Type your comment here"></textarea>
+        <br>
+        <br>
+        <br>
         <input type="file" id="imageInput" accept="image/*">
-        <button onclick="addComment()">Add Comment</button>
+        <br>
+        <br>
+        <br>
+        <button onclick="addComment()" class="add-comment-button-form">Add Comment</button>
     </div>
 
     <script>
@@ -161,9 +198,10 @@
             comments.forEach(function(comment) {
                 var commentDiv = document.createElement('div');
                 commentDiv.classList.add('comment'); // Add the "comment" class for styling
-                var commentText = '<strong>' + comment.name + ':</strong> ' + comment.text;
+                var commentName = '<div class="comment-name">' + comment.name + '</div>'; // Name styling
+                var commentText = comment.text;
                 var commentImage = comment.image ? '<br><img src="' + comment.image + '" width="100%">' : '';
-                commentDiv.innerHTML = commentText + commentImage;
+                commentDiv.innerHTML = commentName + commentText + commentImage;
                 commentsContainer.appendChild(commentDiv);
             });
         }
