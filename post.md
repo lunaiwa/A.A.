@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Comments Section with Pictures</title>
     <style>
         /* CSS for the comments container */
         #comments {
