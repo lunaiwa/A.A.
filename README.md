@@ -1,62 +1,28 @@
-## UI, User Interface
+# Athlete Appetite
 
-Usage
+Athlete Appetite is a website for busy athletes to quickly determine what nutritious meal they should make next. Considering the individual's desired cuisine, personal diet, and time available to make food, we provide personalized recommendations to satisfy their hunger.
 
-1. Midnight Theme. Use the GitHub Pages [Midnight Theme](https://github.com/pages-themes/midnight/blob/master/README.md) as a resource.  This project started with customization of _layouts/default.html from the Midnight Theme.  If you wanted to use a different [GitHub Pages Themes](https://pages.github.com/themes/), you would similarly change `_layouts/default.html` from repo used to support that theme.  Observe comment at top of _layouts/default.html ...
+### Acessing the Website
 
-```html
-<!-- 
-  _layouts/default.html
-  customization to original Midnight theme 
-  found through GitHub Pages Themes
- -->
-```
+To access the Athlete Appetite website, please ue the following link: [Website Link](https://lunaiwa.github.io/AthleteAppetite/)
 
-2. Preview Site (Option A) - [Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll).  This instruction provides instructions for ruby `Gemfile`,`bundle install`.  As an addition add `.gitignore` to avoid seeing build files in commit.   After pre-requisites run this command to obtain prompt for web server ...
+Or to build our website just **git clone** https://github.com/lunaiwa/AthleteAppetite.git
 
-```bash
-bundle exec jekyll serve -H 0.0.0.0 -P 4001 # -H and -P are optional
-```
-3. Install Nix and run using a Nix shell (Option B).  This should be quicker than Docker and more reliable than previous.
+### Features
 
-```bash
-sh <(curl -L https://nixos.org/nix/install) # installs nix requires root password
+**Search Recipies:** You can search recipies within special guidlines and details
 
-# restart terminal as shell is updated, then cd ~/vscode/project-dir assuming you have it cloned
+**Make Comments:** A fun feature we want to add is after completing a meal, users have the option to share their experience whether through a rating / comment / picture of their finished product! Adding the social aspect where users can share their meal with others and comment encouraging positive words we hope will be able to create a welcoming community of athletes who prioritize their nutrition well-being!
 
-nix-shell # start shell, aka nix os virtual environment
-code . # activate VSCode in current directory
+### Feedback and Support
 
-# open vscode terminal
+We hope you enjoy our website ! If you have any issues, suggestions, or need assistence, please see us in Mort's room period 1. We value your feedback and will be happy to assist you.
 
-bundle install # only need to run once, first time. If this command doesn't work, delete your github repo, and reclone it. 
+### Project Plans
 
-bundle exec jekyll serve # run server
+[ISSUE](https://github.com/e-shen2022/APCS_Blog/issues/53#issuecomment-1707610429)
 
-bundle exec jekyll serve --livereload --force_polling # if you are on WSL/windows and the above command doesn't work, try this.
+### Credentials
 
-```
-
-4. Preview Site (Option C) - [GitHub Pages Ruby Gem](https://github.com/github/pages-gem) has additional information on making a local server.  Ruby requirements are the same: `Gemfile`,`bundle install`.   This README looks like basis of FastPages `make server` as it uses Docker and shows how to setup a `Makefile`.
-
-5. Customizing style (CSS).  This project uses `/assets/css/style.scss` as the location to customize your CSS. To avoid warnings in VSCode make sure you install `SCSS IntelliSense` plugin.  To understand default style, make sure you ***Preview Site*** and refer to build generated `_site/assets/css/style.css` (this is worth 1000 lectures).  For the reunion site `gallery.md` uses custom style from `assets/css/style.css` to support 3 images per row.  Observe file and position of import and custom CSS, order is important as clarified in Midnight Theme readme. ...
-
-```css
----
----
-
-@import "{{ site.theme }}";
-
-/* "row style" is flexible size and aligns pictures in center */
-.row {
-    align-items: center;
-    display: flex;
-  }
-  
-  /* "column style" is one-third of the width with padding */
-  .column {
-    flex: 33.33%;
-    padding: 5px;
-  }
-```
+[Emma Shen](https://github.com/e-shen2022) and [Luna Iwazaki](https://github.com/lunaiwa)
 
