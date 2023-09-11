@@ -1,52 +1,49 @@
 <html>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="form.css" />
     <!--Load Jcquery library -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <body>
-        <div class="container">
-            <h1>Find your next meal!</h1>
-            <!-- User input -->
-            <label for="cuisine">Cuisine:</label>
-            <select id="cuisine" name="cuisine">
-                <option value="chinese">Chinese</option>
-                <option value="japanese">Japanese</option>
-                <option value="korean">Korean</option>
-                <option value="vietnamese">Vietnamese</option>
-                <option value="indian">Indian</option>
-                <option value="mexican">Mexican</option>
-                <option value="greek">Greek</option>
-                <option value="american">American</option>
-            </select>
+    <div class="container">
+        <!-- User input -->
+        <form id="recipeForm">
+            <h2>Find your next meal!</h2>
+            <h1 for="cuisine">Cuisine:</h1>
+            <div class="button-group">
+                <option class="form-button" type="button" value="chinese">Chinese</option>
+                <option class="form-button" type="button" value="japanese">Japanese</option>
+                <option class="form-button" type="button" value="korean">Korean</option>
+                <option class="form-button" type="button" value="vietnamese">Vietnamese</option>
+                <option class="form-button" type="button" value="indian">Indian</option>
+                <option class="form-button" type="button" value="mexican">Mexican</option>
+                <option class="form-button" type="button" value="greek">Greek</option>
+                <option class="form-button" type="button" value="american">American</option>
+            </div>
             <br>
+            <h1 for="diet">Diet:</h1>
+            <div class="button-group">
+                <option class="form-button" type="button" value="pescetarian">Pescetarian</option>
+                <option class="form-button" type="button" value="vegetarian">Vegetarian</option>
+                <option class="form-button" type="button" value="vegan">Vegan</option>
+            </div>
             <br>
-            <label for="diet">Diet:</label>
-            <select id="diet" name="diet">
-                <option value="pescetarian">Pescetarian</option>
-                <option value="vegetarian">Vegetarian</option>
-                <option value="vegan">Vegan</option>
-            </select>
+            <h1 for="type">Meal Type:</h1>
+            <div class="button-group">
+                <option class="form-button" type="button" value="breakfast">Breakfast</option>
+                <option class="form-button" type="button" value="main course">Main course</option>
+                <option class="form-button" type="button" value="salad">Salad</option>
+                <option class="form-button" type="button" value="soup">Soup</option>
+                <option class="form-button" type="button" value="dessert">Dessert</option>
+            </div>
             <br>
-            <br>
-            <label for="type">Meal Type:</label>
-            <select id="type" name="type">
-                <option value="breakfast">Breakfast</option>
-                <option value="main course">Main course</option>
-                <option value="salad">Salad</option>
-                <option value="soup">Soup</option>
-                <option value="dessert">Dessert</option>
-            </select>
-            <br>
-            <br>
-            <label for="time">Time (minutes):</label>
+            <h1 for="time">Time (minutes):</h1>
             <input type="number" id="time" name="time" min="0"><br><br>
             <!-- Recipe search button -->
             <button class="btn" id="searchRecipe">Search for Recipe</button>
-            <br><br>
             <!-- Clear table button -->
-             <button onclick="clearContent()">Clear</button>
-            <br>
-            <br>
+            <button class="clear-button" onclick="clearContent()">Clear</button>
+        </form>
             <!-- Display cuisine -->
             <div id="cuisine_display"></div>
             <!-- Display recipe information through table -->
@@ -63,13 +60,6 @@
                     <!-- data goes here-->
                 </tbody>
             </table>
-            <style>
-                table, th, td 
-                {
-                    border: 1px solid black;
-                    border-collapse: collapse;
-                }
-            </style>
         </div>
     </body>
 </html>
@@ -202,5 +192,27 @@
             $("#time").val("");
         });
     });
+
+
+
+    // Function to handle button clicks
+    function handleButtonClick(button) {
+        // Remove the 'selected' class from all buttons in the same group
+        const buttonGroup = button.parentElement;
+        const buttons = buttonGroup.querySelectorAll('.form-button');
+        buttons.forEach((btn) => btn.classList.remove('selected'));
+
+        // Add the 'selected' class to the clicked button
+        button.classList.add('selected');
+    }
+
+    // Attach click event listeners to all form buttons
+    const formButtons = document.querySelectorAll('.form-button');
+    formButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            handleButtonClick(button);
+        });
+    });
+
 </script>
 

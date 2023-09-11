@@ -8,7 +8,6 @@ body {
 /*Title of the page*/
 h1{
     color:#FF5733;
-    font-family: 'Palette Mosaic', cursive;
     font-size: 70px;
     text-align: center;
     padding: 20px;
@@ -17,7 +16,6 @@ h1{
 /*Subtitles on the Page*/
 h2{
     color:#4CAF50;
-    font-family: 'Palette Mosaic', cursive;
     font-size: 30px;
     text-align: center;
     font-family: ravioli;
@@ -25,7 +23,6 @@ h2{
 /*Line and Page Seperation*/
 h3{
     color:#ffff;
-    font-family: 'Palette Mosaic', cursive;
     font-size: 50px;
     text-align: center;
     padding: 10px;
@@ -35,7 +32,6 @@ h3{
 /*Descriptions under the Subtitles*/
 p {
     color: #5dd761;
-    font-family: 'Slackside One', cursive;
     font-size: 25px;
     padding: 30px;
     text-align: justify;

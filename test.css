@@ -1,0 +1,198 @@
+<style>
+/* Custom styles for form buttons */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Center the buttons */
+}
+.form-button {
+    flex: 0 1 calc(33.33% - 10px); /* Distribute buttons evenly with 3 buttons in a row */
+    max-width: calc(33.33% - 10px); /* Limit the maximum width of each button */
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: nexa;
+}
+.form-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Custom styles for the form and buttons */
+#recipeForm {
+    padding: 20px;
+    background-color: transparent; /* Change to transparent */
+    border: none; /* Remove the border */
+}
+
+.btn, .clear-button {
+    border-radius: 20px;
+}
+
+/* Add animation when the submit button is clicked */
+#searchRecipe {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Add transform */
+}
+
+#searchRecipe:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Add scaling effect on hover */
+}
+
+/* Card container styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card styles */
+.card {
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Other styles remain the same */
+/* Style for selected button */
+.form-button.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+table, th, td 
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+/* Reset default margins and paddings */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* Body styles */
+body {
+font-family: Arial, sans-serif;
+background-color: #f5f5f5;
+margin: 0;
+padding: 0;
+}
+/* Container styles */
+.container {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+}
+/* Header styles */
+h1 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+/* Label styles */
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+}
+/* Select and Input styles */
+select,
+input[type="number"],
+button {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border: none;
+border-radius: 4px;
+font-size: 16px;
+background-color: #f9f9f9;
+}
+/* Button styles */
+button {
+background-color: #007
+
+
+
+
+
+body {
+    background-color: #e5e5e5;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 300px;
+    font-family: ravioli;
+}
+/*Title of the page*/
+h1{
+    color:#FF5733;
+    font-size: 70px;
+    text-align: center;
+    padding: 20px;
+    font-family: ravioli;
+}
+h2{
+    color:#FF5733;
+    font-size: 100px;
+    text-align: center;
+    padding: 20px;
+    font-family: ravioli;
+}
+/*Subtitles on the Page*/
+h3{
+    color:#4CAF50;
+    font-size: 100px;
+    text-align: center;
+    font-family: ravioli;
+}
+/*Line and Page Seperation*/
+h4{
+    color:#ffff;
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    font-family: ravioli;
+}
+/*Descriptions under the Subtitles*/
+p {
+    color: #5dd761;
+    font-family: 'Slackside One', cursive;
+    font-size: 25px;
+    padding: 30px;
+    text-align: justify;
+    letter-spacing: -1px;
+    max-width: 900px; 
+    margin: 0 auto;
+    font-family: ravioli;
+}
+
+/*Fonts using DaFont*/
+@font-face {
+    font-family: ravioli;
+    src: url("../ravioli.ttf");
+}
+
+@font-face {
+    font-family: nexa;
+    src: url("../nexa.ttf");
+}
