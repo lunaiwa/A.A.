@@ -123,9 +123,21 @@
         <br>
         <br>
         <button onclick="addComment()" class="add-comment-button-form">Add Comment</button>
+        <!--<button onclick="clearComments()">Clear Comments</button>-->
     </div>
 
     <script>
+
+        // Function to clear all comments
+    function clearComments() {
+        // Clear comments in local storage
+        localStorage.removeItem('comments');
+
+        // Clear the displayed comments
+        var commentsContainer = document.getElementById('comments');
+        commentsContainer.innerHTML = "";
+    }
+
         // Function to toggle the visibility of the comment form
         function toggleForm() {
             var commentForm = document.getElementById('commentForm');
