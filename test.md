@@ -1,7 +1,10 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <!-- Include external stylesheets -->
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="test.css" />
+    <!-- Include jQuery library from a CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         /* Updated styles for cards to have 2 cards in a row */
@@ -32,32 +35,22 @@
             <h3>Find your next meal!</h3>
             <h4 for="cuisine">Cuisine:</h4>
             <div class="button-group">
+                <!-- Cuisine buttons -->
                 <button class="form-button cuisine" type="button" value="chinese">CHINESE</button>
-                <button class="form-button cuisine" type="button" value="japanese">JAPANESE</button>
-                <button class="form-button cuisine" type="button" value="korean">KOREAN</button>
-                <button class="form-button cuisine" type="button" value="vietnamese">VIETNAMESE</button>
-                <button class="form-button cuisine" type="button" value="indian">INDIAN</button>
-                <button class="form-button cuisine" type="button" value="mexican">MEXICAN</button>
-                <button class="form-button cuisine" type="button" value="greek">GREEK</button>
-                <button class="form-button cuisine" type="button" value="american">AMERICAN</button>
                 <!-- Add more cuisine options here -->
             </div>
             <br>
             <h4 for="diet">Diet:</h4>
             <div class="button-group">
+                <!-- Diet buttons -->
                 <button class="form-button diet" type="button" value="pescetarian">PESCETARIAN</button>
-                <button class="form-button diet" type="button" value="vegetarian">VEGETARIAN</button>
-                <button class="form-button diet" type="button" value="vegan">VEGAN</button>
                 <!-- Add more diet options here -->
             </div>
             <br>
             <h4 for="type">Meal Type:</h4>
             <div class="button-group">
+                <!-- Meal type buttons -->
                 <button class="form-button type" type="button" value="breakfast">BREAKFAST</button>
-                <button class="form-button type" type="button" value="main course">MAIN COURSE</button>
-                <button class="form-button type" type="button" value="dessert">DESSERT</button>
-                <button class="form-button type" type="button" value="salad">SALAD</button>
-                <button class="form-button type" type="button" value="soup">SOUP</button>
                 <!-- Add more meal type options here -->
             </div>
             <br>
@@ -66,9 +59,9 @@
             <button class="btn" id="searchRecipe" type="button">Search for Recipe</button>
             <button class="clear-button" onclick="clearContent()" type="button">Clear</button>
         </form>
-            </div>
-        <div id="cuisine_display"></div>
-        <div class="card-container" id="card_result"></div>
+    </div>
+    <div id="cuisine_display"></div>
+    <div class="card-container" id="card_result"></div>
     <script>
         $(document).ready(function () {
             var table_length = 0;
@@ -76,18 +69,20 @@
             var cardContainer = document.getElementById("card_result");
 
             function clearContent() {
-                var rowCount = $("#table_result tr").length;
+                var rowCount = $("#table_result tr").length; // Clear content and table
                 console.log(rowCount);
                 cuisineElement.innerHTML = "";
                 cardContainer.innerHTML = "";
             }
 
             $("#searchRecipe").click(function () {
+                // Get selected values from buttons and input
                 const cuisine = $(".cuisine.selected").val();
                 const diet = $(".diet.selected").val();
                 const type = $(".type.selected").val();
                 const time = $("#time").val();
 
+                // Define parameters for the API request
                 const params = {
                     cuisine: cuisine,
                     diet: diet,
@@ -98,6 +93,7 @@
                     sortDirection: 'asc'
                 };
 
+                // Define settings for the AJAX request
                 const settings = {
                     async: true,
                     crossDomain: true,
@@ -127,6 +123,7 @@
                             }
 
                             for (let row = 0; row < table_length; row++) {
+                                // Create and populate recipe cards
                                 const card = document.createElement('div');
                                 card.classList.add('card');
                                 card.addEventListener('click', () => {
@@ -148,11 +145,13 @@
                         alert("Failed to fetch exercise data from the API.");
                     });
 
+                // Clear selected buttons and input value
                 $(".cuisine, .diet, .type").removeClass("selected");
                 $("#time").val("");
             });
 
             function handleButtonClick(button) {
+                // Handle button clicks for selection
                 const buttonGroup = button.parentElement;
                 const buttons = buttonGroup.querySelectorAll('.form-button');
                 buttons.forEach((btn) => btn.classList.remove('selected'));
@@ -166,8 +165,6 @@
                 });
             });
         });
-        
     </script>
 </body>
 </html>
-

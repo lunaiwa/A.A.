@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Comments Section with Pictures</title>
@@ -101,7 +102,7 @@
 </head>
 <body>
     <h1>Culinary Creations</h1>
-    <h2>post and share to everyone here!</h2>
+    <h2>Post and share with everyone here!</h2>
     <br>
     <div id="comments">
         <!-- Existing comments will be displayed here -->
