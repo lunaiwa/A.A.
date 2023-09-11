@@ -1,6 +1,7 @@
 <head>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="about.css" />
 
 </head>
 <body>
@@ -25,6 +26,15 @@
 <br />
 <br />
 
+    <div class="container">
+        <button onclick="redirectToIssuesPage()" class="animated-button">Go to Issues</button>
+    </div>
+    <script>
+        function redirectToIssuesPage() {
+            window.location.href = 'https://github.com/e-shen2022/APCS_Blog/issues/53';
+        }
+    </script>
+
 <h1> Creators </h1>
 
 
@@ -45,6 +55,7 @@
 
 
 </body>
+
  
  
 
