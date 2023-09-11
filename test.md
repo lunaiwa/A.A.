@@ -26,11 +26,11 @@
         }
     </style>
 </head>
-<body>
+<body class="pad">
     <div class="container">
         <form id="recipeForm">
             <h3>Find your next meal!</h3>
-            <h3 for="cuisine">Cuisine:</h3>
+            <h4 for="cuisine">Cuisine:</h4>
             <div class="button-group">
                 <button class="form-button cuisine" type="button" value="chinese">CHINESE</button>
                 <button class="form-button cuisine" type="button" value="japanese">JAPANESE</button>
@@ -43,7 +43,7 @@
                 <!-- Add more cuisine options here -->
             </div>
             <br>
-            <h3 for="diet">Diet:</h3>
+            <h4 for="diet">Diet:</h4>
             <div class="button-group">
                 <button class="form-button diet" type="button" value="pescetarian">PESCETARIAN</button>
                 <button class="form-button diet" type="button" value="vegetarian">VEGETARIAN</button>
@@ -51,7 +51,7 @@
                 <!-- Add more diet options here -->
             </div>
             <br>
-            <h3 for="type">Meal Type:</h3>
+            <h4 for="type">Meal Type:</h4>
             <div class="button-group">
                 <button class="form-button type" type="button" value="breakfast">BREAKFAST</button>
                 <button class="form-button type" type="button" value="main course">MAIN COURSE</button>
@@ -61,7 +61,7 @@
                 <!-- Add more meal type options here -->
             </div>
             <br>
-            <h3 for="time">Time (minutes):</h3>
+            <h4 for="time">Time (minutes):</h4>
             <input type="number" id="time" name="time" min="0"><br><br>
             <button class="btn" id="searchRecipe" type="button">Search for Recipe</button>
             <button class="clear-button" onclick="clearContent()" type="button">Clear</button>
@@ -136,7 +136,7 @@
                                 const image = response.results[row].image;
                                 const summary = response.results[row].summary;
                                 card.innerHTML = `
-                                    <h3>${title}</h3>
+                                    <h4>${title}</h4>
                                     <img src="${image}" alt="${title}">
                                     <p>${summary}</p>
                                 `;
@@ -166,6 +166,8 @@
                 });
             });
         });
+        
     </script>
 </body>
 </html>
+
